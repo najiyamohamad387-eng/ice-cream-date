@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Ice Cream Date ❤️</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+</head>
+
+<body>
+
+    <!-- Page 1 -->
+    <div id="page1" class="container">
+
+        <h1>Hey, beautiful 😊</h1>
+
+        <p>I have one important question...</p>
+
+        <button type="button" onclick="nextPage()">
+            Continue ❤️
+        </button>
+
+    </div>
+
+
+    <!-- Page 2 -->
+    <div id="page2" class="container hidden">
+
+        <h1>🍦</h1>
+
+        <h2>
+            Do you want to go on an ice cream date with me?
+        </h2>
+
+        <div class="buttons">
+
+            <button
+                id="yesButton"
+                type="button"
+                onclick="yesClicked()"
+            >
+                Yes ❤️
+            </button>
+
+            <button
+                id="noButton"
+                type="button"
+            >
+                No 😅
+            </button>
+
+        </div>
+
+        <p id="message"></p>
+
+    </div>
+
+
+    <!-- Page 3 -->
+    <div id="page3" class="container hidden">
+
+        <h1>🍦 Date Confirmed!</h1>
+
+        <p>
+            I knew you would say yes. ❤️
+        </p>
+
+        <p>
+            Now there is just one more question...
+        </p>
+
+        <button
+            type="button"
+            onclick="flavorPage()"
+        >
+            Choose your flavour 🍨
+        </button>
+
+    </div>
+
+
+    <!-- Page 4 -->
+    <div id="page4" class="container hidden">
+
+        <h1>🍨 Choose Your Favourite Flavour</h1>
+
+        <p>
+            I need to know what ice cream we are getting ❤️
+        </p>
+
+        <div class="flavor-container">
+
+            <button
+                type="button"
+                onclick="chooseFlavor('Chocolate 🍫')"
+            >
+                Chocolate 🍫
+            </button>
+
+            <button
+                type="button"
+                onclick="chooseFlavor('Strawberry 🍓')"
+            >
+                Strawberry 🍓
+            </button>
+
+            <button
+                type="button"
+                onclick="chooseFlavor('Vanilla 🍦')"
+            >
+                Vanilla 🍦
+            </button>
+
+            <button
+                type="button"
+                onclick="chooseFlavor('Cookies & Cream 🍪')"
+            >
+                Cookies & Cream 🍪
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- Page 5 -->
+    <div id="page5" class="container hidden">
+
+        <h1>🍦 Perfect Choice!</h1>
+
+        <p id="chosenFlavor"></p>
+
+        <p>
+            I cannot wait for our ice cream date ❤️
+        </p>
+
+    </div>
+
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
